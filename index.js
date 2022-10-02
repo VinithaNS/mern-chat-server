@@ -30,7 +30,7 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
 
 //create server
 const server = require("http").createServer(app);
-const PORT = 8000;
+
 const io = require("socket.io")(server, {
     cors: {
         origin: 'http://localhost:3000',
@@ -106,6 +106,7 @@ app.get('/rooms', (req, res)=> {
 app.get('/', (req, res)=>{
   res.send("Hello World");
 });
+const PORT = process.env.PORT|| 8000;
 server.listen(PORT, () => {
     console.log(`Server is Running Successfully on PORT ${PORT}`);
 });
