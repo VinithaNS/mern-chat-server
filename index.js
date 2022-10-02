@@ -103,6 +103,9 @@ io.on('connection', (socket)=> {
 app.get('/rooms', (req, res)=> {
     res.json(rooms)
 });
+app.get('/', (req, res)=>{
+  res.send("Hello World");
+});
 
 server.listen(PORT, () => {
     console.log(`Server is Running Successfully on PORT ${PORT}`);
