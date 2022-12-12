@@ -32,10 +32,10 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
 const server = require("http").createServer(app);
 
 const io = require("socket.io")(server, {
-    cors: {
-        origin: 'https://6339b26ef4edc071d666f792--statuesque-valkyrie-19ae01.netlify.app',
-        methods: ['GET', 'POST']
-    }
+  cors: {
+    origin: "https://funny-madeleine-a5b1a0.netlify.app",
+    methods: ["GET", "POST"],
+  },
 });
 
 async function getLastMessagesFromRoom(room){
