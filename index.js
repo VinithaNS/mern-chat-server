@@ -33,7 +33,8 @@ const server = require("http").createServer(app);
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "https://funny-madeleine-a5b1a0.netlify.app",
+    // origin: "https://funny-madeleine-a5b1a0.netlify.app",
+    origin:"https://mern-chat-client-seven.vercel.app",
     methods: ["GET", "POST"],
   },
 });
